@@ -1,0 +1,28 @@
+artifact_path: sentiment_model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.0
+mlflow_version: 2.19.0
+model_size_bytes: 206523
+model_uuid: b55e1128081448aea9515340930f4892
+run_id: 40c77265e6b541f4b8642ef76f59405b
+saved_input_example_info:
+  artifact_path: input_example.json
+  serving_input_path: serving_input_example.json
+  type: ndarray
+signature:
+  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 5000]}}]'
+  outputs: '[{"type": "long", "name": "category", "required": true}]'
+  params: null
+utc_time_created: '2024-12-12 19:44:36.707997'
